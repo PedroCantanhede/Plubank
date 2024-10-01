@@ -1,0 +1,13 @@
+.topo {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-clara);
+    font-size: var(--fonte-t3);
+    padding-block: 30px;
+    margin-bottom: 24px;
+
+    .usuario {
+        & span {
+            margin-right: 40px;
+        }
+    }
+}
