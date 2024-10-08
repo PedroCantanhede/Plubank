@@ -13,9 +13,9 @@ function renderizarExtrato() {
         for (let transacao of grupoTransacao.transacoes) {
             const classeTransacao = transacao.tipoTransacao === TipoTransacao.DEPOSITO
                 ? "deposito"
-                : "saida"; // Para Transferência e Pagamento de Boleto, considere como "saida"
+                : "saida"; // Para Transferência e Pagamento de Boleto, considera como "saida"
             htmlTransacaoItem += `
-                <div class="transacao-item ${classeTransacao}">
+                <div class="transacao-item ${classeTransacao}"> <!-- A classe foi adicionada aqui -->
                     <div class="transacao-info">
                         <span class="tipo">${transacao.tipoTransacao}</span>
                         <strong class="valor">${formatarMoeda(transacao.valor)}</strong>
@@ -27,7 +27,7 @@ function renderizarExtrato() {
         htmlRegistroTransacoes += `
             <div class="transacoes-group">
                 <strong class="mes-group">${grupoTransacao.label}</strong>
-                ${htmlTransacaoItem}      
+                ${htmlTransacaoItem}
             </div>
         `;
     }
